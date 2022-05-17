@@ -1,7 +1,5 @@
-
-   
 import React from "react";
-import loginImg from "../../img/placeholder.png";
+import loginImg from "../../img/videodevlogo.png";
 
 export class Login extends React.Component {
 
