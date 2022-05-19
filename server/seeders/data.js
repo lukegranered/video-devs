@@ -723,5 +723,20 @@ postData = [
     postText: "I will develop react js redux firebase web app",
     username: "diiannoni2n",
   },
+  {
+    postText:
+      "Software Engineer - .Net Software Engineer 6 Month Contract Remote ",
+    username: "tvarvara2m",
+  },
+  {
+    postText:
+      "Frontend Developer Are you a Frontend Developer looking for new and exciting opportunities? If so, then you could be the perfect person to join the Darwin family!",
+    username: "aneachell2g",
+  },
+  {
+    postText:
+      "Oracle Integration Design Specialist Oracle Integration Design Specialist to support ",
+    username: "tvarvara2m",
+  },
 ];
 module.exports = { userData, postData };
