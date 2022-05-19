@@ -30,10 +30,10 @@ const resolvers = {
     },
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+      return Post.find(params).sort({ createdAt: -1 });
     },
     post: async (parent, { _id }) => {
-      return Thought.findOne({ _id });
+      return Post.findOne({ _id });
     },
   },
   Mutation: {
@@ -68,7 +68,7 @@ const resolvers = {
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { posts: thought._id } },
+          { $push: { posts: post._id } },
           { new: true }
         );
 
