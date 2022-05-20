@@ -81,7 +81,7 @@ const resolvers = {
     addComment: async (parent, { postId, commentBody }, context) => {
       if (context.user) {
         const updatedPost = await Post.findOneAndUpdate(
-          { _id: thoughtId },
+          { _id: postId },
           {
             $push: {
               comments: { commentBody, username: context.user.username },
@@ -96,11 +96,11 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    addContact: async (parent, { friendId }, context) => {
+    addContact: async (parent, { contactId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { contacts: friendId } },
+          { $addToSet: { contacts: contactId } },
           { new: true }
         ).populate("contacts");
 
