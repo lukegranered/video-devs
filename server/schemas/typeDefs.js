@@ -7,7 +7,7 @@ const typeDefs = gql`
     name: String
     lastname: String
     email: String
-    contactCount: Int
+    contactsCount: Int
     post: [Post]
     contacts: [User]
   }
