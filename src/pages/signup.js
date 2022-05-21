@@ -1,14 +1,14 @@
 import React from 'react'
 import ScrollToTop from '../components/ScrollToTop'
-import SignIn from '../components/Signin'
+import SignUp from '../components/SignUp'
 
-const SigninPage = () => {
+const SignUpPage = () => {
   return (
     <div>
         <ScrollToTop />
-        <SignIn />
+        <SignUp />
     </div>
   )
 }
 
-export default SigninPage
+export default SignUpPage

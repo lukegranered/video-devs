@@ -48,3 +48,20 @@ export const homeObjThree = {
     primary: true,
     darkText: false
 }
+
+export const homeObjFour = {
+    id: 'signup',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'VideoDev',
+    headLine: 'Like what you see?',
+    description: 'We would love to have you, click below to join VideoDev!',
+    buttonLabel: 'Sign Up Today!',
+    imgStart: true,
+    img: require('../../images/conference.svg'),
+    alt: 'img',
+    dark: true,
+    primary: true,
+    darkText: true
+}
