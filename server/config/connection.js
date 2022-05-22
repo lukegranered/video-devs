@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/video-devs", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
