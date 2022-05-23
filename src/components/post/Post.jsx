@@ -31,8 +31,8 @@ export default function Post({ post }) {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <img className="likeIcon" src='../../assets/like.png' onClick={likeHandler} />
                         <img className="likeIcon" src='../../assets/heart.png' onClick={likeHandler} />
+                        <img className="likeIcon" src='../../assets/like.png' onClick={likeHandler} />
                         <span className="postLikeCounter">{like} like this</span>
                     </div>
                     <div className="postBottomRight">
