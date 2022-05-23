@@ -1,9 +1,9 @@
 import Home from "./pages/home/Home";
-import {Person} from "@mui/icons-material";
 import Profile from "./pages/profile/Profile";
+import Login from "./components/login/login";
 function App() {
   return (
-      <Profile/>
+      <Login/>
   );
 }
 

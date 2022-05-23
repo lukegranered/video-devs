@@ -1,7 +1,6 @@
 import React from 'react';
 import './sidebar.css';
 import { RssFeed, Person, Work, Event } from "@mui/icons-material";
-import { Users } from "../../dummyData"
 import CloseFriend from '../closeFriends/CloseFriend'
 
 export default function Sidebar() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './post.css'
 import { MoreVert, Favorite, ThumbUp } from '@mui/icons-material'
-import { Users } from "../../dummyData"
+
 
 export default function Post({ post }) {
     const [like, setLike] = useState(post.like)
