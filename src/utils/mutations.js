@@ -26,8 +26,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_CONTACT = gql`
-  mutation addContact(contactId: ID!) {
-    addContact(contactId: ID!) {
+  mutation addContact($contactId: ID!) {
+    addContact(contactId: $contactId) {
       _id
       username
       contactsCount
@@ -52,7 +52,7 @@ export const ADD_POST = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation  addComment(postId: ID!, commentBody: String!): {
+  mutation  addComment($postId: ID!, $commentBody: String!) {
     addComment(postId: $postId, commentBody: $commentBody) {
       _id
       commentCount
