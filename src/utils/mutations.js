@@ -24,3 +24,44 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_CONTACT = gql`
+  mutation addContact(contactId: ID!) {
+    addContact(contactId: ID!) {
+      _id
+      username
+      contactsCount
+      contacts {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+export const ADD_POST = gql`
+  mutation addPost($postText: String!) {
+    addPost(postText: $postText) {
+      _id
+      postText
+      createdAt
+      username
+      commentCount
+    }
+  }
+`;
+
+export const ADD_COMMENT = gql`
+  mutation  addComment(postId: ID!, commentBody: String!): {
+    addComment(postId: $postId, commentBody: $commentBody) {
+      _id
+      commentCount
+      comments  {
+        _id
+        commentBody
+        createdAt
+        username
+      }
+    }
+  }
+`;
