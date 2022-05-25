@@ -11,15 +11,15 @@ import {
   FormButton,
   Text,
 } from "./SigninElements";
-
+import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-const SignIn = () => {
+const SignIn = (props) => {
   const [login, { error }] = useMutation(LOGIN_USER);
   const [formState, setFormState] = useState({ email: "", password: "" });
-
+  const navigate = useNavigate();
   const handleChange = event => {
     const { name, value } = event.target;
 
@@ -40,6 +40,7 @@ const SignIn = () => {
 
       console.log(data);
       Auth.login(data.login.token);
+      navigate("/feed", { replace: true });
     } catch (e) {
       console.error(e);
     }
